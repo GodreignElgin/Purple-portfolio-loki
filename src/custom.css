@@ -1,0 +1,148 @@
+/* 
+  custom.css - Global styles
+  Updated color palette from orange to purple/blue shades 
+*/
+
+/* Custom Variables - Purple/Blue Palette */
+:root {
+  /* Primary Colors */
+  --color-primary-light: #A78BFF;
+  --color-primary: #8F5CFF;
+  --color-primary-dark: #6A35E5;
+  
+  /* Secondary Colors */
+  --color-secondary-light: #5C8FFF;
+  --color-secondary: #4F8CFF;
+  --color-secondary-dark: #3367E0;
+  
+  /* Accent Colors */
+  --color-accent-light: #C45CFF;
+  --color-accent: #B642FF;
+  --color-accent-dark: #9B26E3;
+  
+  /* Background Shades */
+  --color-background-light: #1E1E2E;
+  --color-background: #151525;
+  --color-background-dark: #0C0C18;
+  
+  /* Text Colors */
+  --color-text-light: #F5F5FF;
+  --color-text: #E6E6F5;
+  --color-text-dark: #C4C4E0;
+  --color-text-muted: #8585A6;
+  
+  /* Gradient Definitions */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  --gradient-glass: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  --gradient-blue: linear-gradient(135deg, var(--color-secondary), var(--color-primary-dark));
+  
+  /* Effects */
+  --glow-primary: 0 0 20px rgba(143, 92, 255, 0.5);
+  --glow-secondary: 0 0 25px rgba(79, 140, 255, 0.4);
+  --shadow-card: 0 10px 30px rgba(12, 12, 24, 0.5);
+  --shadow-button: 0 5px 15px rgba(143, 92, 255, 0.3);
+}
+
+/* Animation Classes */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Glassmorphism Effects */
+.glassmorphic {
+  backdrop-filter: blur(8px);
+  background: var(--gradient-glass);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glassmorphic-card {
+  backdrop-filter: blur(12px);
+  background: rgba(30, 30, 46, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: var(--shadow-card);
+}
+
+/* Button Effects */
+.btn-gradient {
+  background: var(--gradient-primary);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gradient:hover {
+  box-shadow: var(--glow-primary);
+  transform: translateY(-3px);
+}
+
+.btn-gradient:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+  transform: translateX(-100%);
+}
+
+.btn-gradient:hover:after {
+  animation: btn-shine 1.5s infinite;
+}
+
+@keyframes btn-shine {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Pulse Glow Animation */
+.animate-pulse-glow {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(143, 92, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(143, 92, 255, 0.8), 0 0 30px rgba(196, 92, 255, 0.4);
+  }
+}
+
+/* Custom Text Sizes */
+.text-hero {
+  font-size: 4rem;
+  line-height: 1.1;
+}
+
+@media (min-width: 640px) {
+  .text-hero {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-hero {
+    font-size: 6rem;
+  }
+}
