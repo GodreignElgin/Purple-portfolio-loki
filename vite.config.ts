@@ -4,33 +4,36 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/Purple-portfolio-loki/' : '/',
+export default defineConfig(({ mode, command }) => ({
+  base: mode === 'github' ? '/Purple-portfolio-loki/' : '/',
   server: {
     host: "::",
     port: 8080,
   },
-  plugins: [
-    react(),
-    mode === 'development' &&
-    componentTagger(),
-  ].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-      "three": path.resolve(__dirname, "node_modules/three"),
+    preview: {
+      port: 4173,
     },
-  },
-  optimizeDeps: {
-    include: ["three", "@react-three/fiber", "@react-three/drei"]
-  },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'three-bundle': ['three', '@react-three/fiber', '@react-three/drei']
+    plugins: [
+      react(),
+      mode === 'development' &&
+      componentTagger(),
+    ].filter(Boolean),
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+        "three": path.resolve(__dirname, "node_modules/three"),
+      },
+    },
+    optimizeDeps: {
+      include: ["three", "@react-three/fiber", "@react-three/drei"]
+    },
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'three-bundle': ['three', '@react-three/fiber', '@react-three/drei']
+          }
         }
       }
     }
-  }
 }));

@@ -9,13 +9,16 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Use basename for GitHub Pages only when built in github mode
+const basename = import.meta.env.MODE === 'github' ? '/Purple-portfolio-loki' : '';
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
   {/* <RenderDebug /> */}
-      <BrowserRouter basename="/Purple-portfolio-loki">
+      <BrowserRouter basename={basename}>
         <Routes>
           <Route path="/" element={<Portfolio />} />
           <Route path="*" element={<NotFound />} />
