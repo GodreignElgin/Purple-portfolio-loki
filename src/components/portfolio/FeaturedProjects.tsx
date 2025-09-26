@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import { ModelViewer } from './ModelViewer';
+import { getModelPath } from '@/lib/asset-paths';
 
 interface Project {
   id: string;
@@ -18,7 +19,7 @@ const projects: Project[] = [
     hoverCaption: 'High-detail model of a jet engine assembly, showcasing core propulsion system components.',
     description: 'This 3D model illustrates the complexity of a jet engine with visible internal assemblies. It highlights engineering precision in turbine design and flow dynamics. Perfect for demonstrating aerospace mechanical expertise.',
     image: '/api/placeholder/400/300',
-    modelUrl: '/models/jet_eng-up-Optimized.glb'
+    modelUrl: getModelPath('jet_eng-up-Optimized.glb')
   },
   {
     id: 'straight-4-engine',
@@ -26,7 +27,7 @@ const projects: Project[] = [
     hoverCaption: 'Interactive visualization of a 4-cylinder piston-crankshaft system highlighting motion dynamics.',
     description: 'A straight-four piston-crankshaft engine design capturing the fundamentals of motion transfer. The model emphasizes accuracy in alignment and component interaction. It demonstrates automotive engineering with clarity and precision.',
     image: '/api/placeholder/400/300',
-    modelUrl: '/models/jet_eng-up-Optimized.glb'
+    modelUrl: getModelPath('jet_eng-up-Optimized.glb')
   },
   {
     id: 'exhaust-manifold',
@@ -34,7 +35,7 @@ const projects: Project[] = [
     hoverCaption: 'Mechanical design of an exhaust manifold optimized for thermal efficiency and durability.',
     description: 'This manifold system showcases efficient routing for exhaust gases in automotive applications. The 3D design captures structural reinforcement and durability under heat stress. It represents practical design balanced with performance optimization.',
     image: '/api/placeholder/400/300',
-    modelUrl: '/models/portfolio_exhaustmanifold.glb'
+    modelUrl: getModelPath('portfolio_exhaustmanifold.glb')
   },
 ];
 
