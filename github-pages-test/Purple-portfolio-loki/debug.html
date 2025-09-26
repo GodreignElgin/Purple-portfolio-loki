@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug - Portfolio Deployment Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .success { background-color: #d4edda; color: #155724; }
+        .error { background-color: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>Portfolio Deployment Debug</h1>
+    <p>If you can see this page, the basic deployment is working.</p>
+    
+    <div class="status success">✓ HTML files are being served correctly</div>
+    
+    <h2>Debug Information:</h2>
+    <ul>
+        <li><strong>Current URL:</strong> <span id="currentUrl"></span></li>
+        <li><strong>Base URL:</strong> <span id="baseUrl"></span></li>
+        <li><strong>Repository:</strong> Purple-portfolio-loki</li>
+        <li><strong>Expected Path:</strong> /Purple-portfolio-loki/</li>
+    </ul>
+    
+    <h2>Test Links:</h2>
+    <ul>
+        <li><a href="./index.html">Main App (index.html)</a></li>
+        <li><a href="./404.html">404 Page</a></li>
+        <li><a href="./">Root Directory</a></li>
+    </ul>
+
+    <script>
+        document.getElementById('currentUrl').textContent = window.location.href;
+        document.getElementById('baseUrl').textContent = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '/');
+        
+        // Test if main assets are accessible
+        fetch('./assets/')
+            .then(response => {
+                if (response.ok) {
+                    document.body.innerHTML += '<div class="status success">✓ Assets directory is accessible</div>';
+                } else {
+                    document.body.innerHTML += '<div class="status error">✗ Assets directory is not accessible</div>';
+                }
+            })
+            .catch(error => {
+                document.body.innerHTML += '<div class="status error">✗ Error accessing assets: ' + error.message + '</div>';
+            });
+    </script>
+</body>
+</html>

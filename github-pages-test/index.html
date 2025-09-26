@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Pages Path Test</title>
+    <style>body { font-family: Arial; padding: 20px; }</style>
+</head>
+<body>
+    <h1>GitHub Pages Path Test</h1>
+    <p><strong>Current URL:</strong> <span id="url"></span></p>
+    <p><strong>Expected Path:</strong> /Purple-portfolio-loki/</p>
+    
+    <h2>Test Links:</h2>
+    <ul>
+        <li><a href="./Purple-portfolio-loki/">Go to Portfolio App</a></li>
+        <li><a href="./Purple-portfolio-loki/debug.html">Go to Debug Page</a></li>
+        <li><a href="./Purple-portfolio-loki/assets/">Check Assets Folder</a></li>
+    </ul>
+    
+    <script>
+        document.getElementById('url').textContent = window.location.href;
+        console.log('GitHub Pages test page loaded');
+        console.log('Location:', window.location.href);
+    </script>
+</body>
+</html>
