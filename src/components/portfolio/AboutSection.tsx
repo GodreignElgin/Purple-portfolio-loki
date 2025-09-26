@@ -68,7 +68,7 @@ export const AboutSection = () => {
               </div> */}
               <div className="w-48 h-48 bg-gradient-metallic rounded-2xl shadow-2xl flex items-center justify-center overflow-hidden">
                 <img 
-                  src={getAssetPath('/pic.jpeg')} 
+                  src={getAssetPath('/loki-pic.jpeg')} 
                   alt="Lokesh Balamurugan - Mechanical Engineer"
                   className="w-full h-full object-cover rounded-2xl"
                 />
