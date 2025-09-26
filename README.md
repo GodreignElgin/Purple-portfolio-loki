@@ -4,6 +4,8 @@
 
 **URL**: https://lovable.dev/projects/dbf7f2de-9059-4631-b1d1-ebbbe2de3947
 
+<!-- GitHub Pages deployment configured: https://GodreignElgin.github.io/Purple-portfolio-loki/ -->
+
 ## How can I edit this code?
 
 There are several ways of editing your application.
