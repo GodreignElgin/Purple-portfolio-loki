@@ -27,7 +27,7 @@ const projects: Project[] = [
     hoverCaption: 'Interactive visualization of a 4-cylinder piston-crankshaft system highlighting motion dynamics.',
     description: 'A straight-four piston-crankshaft engine design capturing the fundamentals of motion transfer. The model emphasizes accuracy in alignment and component interaction. It demonstrates automotive engineering with clarity and precision.',
     image: '/api/placeholder/400/300',
-    modelUrl: getModelPath('jet_eng-up-Optimized.glb')
+    modelUrl: getModelPath('portfolio_wngine.glb')
   },
   {
     id: 'exhaust-manifold',

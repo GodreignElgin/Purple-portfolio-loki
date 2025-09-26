@@ -27,7 +27,7 @@ const galleryProjects: Project[] = [
     hoverCaption: 'Innovative drone design integrating hydrofoil principles for stability and lift efficiency.',
     description: 'A hybrid drone concept merging aerial and hydrodynamic engineering principles. The hydrofoil structure enhances lift stability when transitioning between mediums. It demonstrates creative thinking in modern UAV design.',
     image: '/api/placeholder/400/300',
-    modelUrl: getModelPath('hydrofoilsurfboarf.glb')
+    modelUrl: getModelPath('clutch_plateasm.glb')
   },
   {
     id: 'hybrid-drone',
