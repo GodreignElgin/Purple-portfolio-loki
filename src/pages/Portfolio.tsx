@@ -31,7 +31,7 @@ const Portfolio = () => {
 
   // Set document title
   useEffect(() => {
-    document.title = "Lokesh Balamurugan | 3D Design Portfolio - Mechanical Engineer & CAD Specialist";
+    document.title = "Lokeesh Balamurugan | 3D Design Portfolio - Mechanical Engineer & CAD Specialist";
   }, []);
   
   return (
