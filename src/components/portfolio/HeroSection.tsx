@@ -14,7 +14,7 @@ export const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center space-y-8 fade-in-up">
         <h1 className="text-hero font-orbitron font-bold text-foreground leading-tight drop-shadow-xl">
-          <span className="block">Lokesh</span>
+          <span className="block">Lokeesh</span>
           <span className="block text-primary animate-pulse-glow">Balamurugan</span>
         </h1>
         <div className="space-y-4 fade-in-up" style={{ animationDelay: '0.3s' }}>
