@@ -7,7 +7,7 @@ export default function SimpleBackground() {
         position: 'absolute', 
         inset: 0,
         zIndex: 0,
-        background: 'linear-gradient(135deg, #151525 0%, #1E1E2E 100%)',
+        background: 'transparent',
         overflow: 'hidden'
       }}
     >

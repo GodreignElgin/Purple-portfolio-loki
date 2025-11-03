@@ -5,8 +5,6 @@ import { FeaturedProjects } from '../components/portfolio/FeaturedProjects';
 import { ProjectGallery } from '../components/portfolio/ProjectGallery';
 import { ContactSection } from '../components/portfolio/ContactSection';
 import { FooterSection } from '../components/portfolio/FooterSection';
-// Fix import to use default export
-import AnimatedBackground from '../components/portfolio/AnimatedBackground';
 
 const Portfolio = () => {
   // Add scroll animation observer
@@ -38,8 +36,6 @@ const Portfolio = () => {
   
   return (
     <main className="relative min-h-screen bg-background overflow-x-hidden">
-      <AnimatedBackground />
-      
       {/* Main content sections */}
       <HeroSection />
       <AboutSection />

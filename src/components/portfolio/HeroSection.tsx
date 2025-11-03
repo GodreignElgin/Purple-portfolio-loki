@@ -1,8 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { Suspense } from 'react';
-// Import the Hero3DBackground component
-import Hero3DBackground from './Hero3DBackground';
-// Import a simple background as fallback
 import SimpleBackground from './SimpleBackground';
 
 export const HeroSection = () => {
@@ -13,13 +9,8 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden bg-transparent">
-      {/* Try to use 3D background with SimpleBackground as fallback */}
       <SimpleBackground />
-      {/* We'll enable this when we confirm the rest of the app is working
-      <Suspense fallback={<SimpleBackground />}>
-        <Hero3DBackground />
-      </Suspense>
-      */}
+      
       {/* Content */}
       <div className="relative z-10 text-center space-y-8 fade-in-up">
         <h1 className="text-hero font-orbitron font-bold text-foreground leading-tight drop-shadow-xl">
